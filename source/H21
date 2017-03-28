@@ -1,0 +1,14 @@
+Seq#	Correct	User	good?
+0	n	y	no
+1	y	n	no
+2	n	y	no
+3	y	y	yes
+4	y	n	no
+5	n	n	yes
+6	y	n	no
+7	n	y	no
+8	n	n	yes
+9	y	n	no
+total correct: 3
+total: 30.0%
+

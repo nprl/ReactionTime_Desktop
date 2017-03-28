@@ -1,0 +1,42 @@
+Seq#	Correct	User	good?
+0	n	n	yes
+1	y	n	no
+2	n	n	yes
+3	y	n	no
+4	y	n	no
+5	n	n	yes
+6	y	n	no
+7	n	n	yes
+8	n	n	yes
+9	y	n	no
+total correct: 5
+total: 50.0%
+
+Seq#	Correct	User	good?
+0	n	n	yes
+1	y	n	no
+2	n	y	no
+3	y	y	yes
+4	y	n	no
+5	n	n	yes
+6	y	n	no
+7	n	n	yes
+8	n	n	yes
+9	y	n	no
+total correct: 5
+total: 50.0%
+
+Seq#	Correct	User	good?
+0	n	n	yes
+1	y	y	yes
+2	n	y	no
+3	y	y	yes
+4	y	y	yes
+5	n	n	yes
+6	y	n	no
+7	n	n	yes
+8	n	n	yes
+9	y	n	no
+total correct: 7
+total: 70.0%
+
