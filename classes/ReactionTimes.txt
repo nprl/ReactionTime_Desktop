@@ -1604,3 +1604,89 @@ S05_2_PRE	TESTR	RandEnd	0	0.0
 S05_2_PRE	TESTR	Overall	648	0.69
 End at 16
 
+ID: 	Cond	Block	AvgRxnT	Accuracy
+delete_1_pre	TESTR	RandBeg	349	0.91
+delete_1_pre	TESTR	Rep1	0	0.0
+delete_1_pre	TESTR	Rep2	0	0.0
+delete_1_pre	TESTR	Rep3	0	0.0
+delete_1_pre	TESTR	Rep4	0	0.0
+delete_1_pre	TESTR	Rep5	0	0.0
+delete_1_pre	TESTR	Rep6	0	0.0
+delete_1_pre	TESTR	Rep7	0	0.0
+delete_1_pre	TESTR	Rep8	0	0.0
+delete_1_pre	TESTR	Rep9	0	0.0
+delete_1_pre	TESTR	Rep10	0	0.0
+delete_1_pre	TESTR	Rep11	0	0.0
+delete_1_pre	TESTR	Rep12	0	0.0
+delete_1_pre	TESTR	Rep13	0	0.0
+delete_1_pre	TESTR	Rep14	0	0.0
+delete_1_pre	TESTR	Rep15	0	0.0
+delete_1_pre	TESTR	RepAvg	0	0.0
+delete_1_pre	TESTR	RandEnd	0	0.0
+delete_1_pre	TESTR	Overall	349	0.91
+End at 11
+
+ID: 	Cond	Block	AvgRxnT	Accuracy
+delete_0_0	TRAINR	RandBeg	0	0.0
+delete_0_0	TRAINR	Rep1	0	0.0
+delete_0_0	TRAINR	Rep2	0	0.0
+delete_0_0	TRAINR	Rep3	0	0.0
+delete_0_0	TRAINR	Rep4	0	0.0
+delete_0_0	TRAINR	Rep5	0	0.0
+delete_0_0	TRAINR	Rep6	0	0.0
+delete_0_0	TRAINR	Rep7	0	0.0
+delete_0_0	TRAINR	Rep8	0	0.0
+delete_0_0	TRAINR	Rep9	0	0.0
+delete_0_0	TRAINR	Rep10	0	0.0
+delete_0_0	TRAINR	Rep11	0	0.0
+delete_0_0	TRAINR	Rep12	0	0.0
+delete_0_0	TRAINR	Rep13	0	0.0
+delete_0_0	TRAINR	Rep14	0	0.0
+delete_0_0	TRAINR	Rep15	0	0.0
+delete_0_0	TRAINR	Rep16	0	0.0
+delete_0_0	TRAINR	Rep17	0	0.0
+delete_0_0	TRAINR	Rep18	0	0.0
+delete_0_0	TRAINR	Rep19	0	0.0
+delete_0_0	TRAINR	Rep20	0	0.0
+delete_0_0	TRAINR	Rep21	0	0.0
+delete_0_0	TRAINR	Rep22	0	0.0
+delete_0_0	TRAINR	Rep23	0	0.0
+delete_0_0	TRAINR	Rep24	0	0.0
+delete_0_0	TRAINR	Rep25	0	0.0
+delete_0_0	TRAINR	RepAvg	0	0.0
+delete_0_0	TRAINR	RandEnd	0	0.0
+delete_0_0	TRAINR	Overall	0	0.0
+End at 0
+
+ID: 	Cond	Block	AvgRxnT	Accuracy
+delete_0_0	TRAINL	RandBeg	0	0.0
+delete_0_0	TRAINL	Rep1	0	0.0
+delete_0_0	TRAINL	Rep2	0	0.0
+delete_0_0	TRAINL	Rep3	0	0.0
+delete_0_0	TRAINL	Rep4	0	0.0
+delete_0_0	TRAINL	Rep5	0	0.0
+delete_0_0	TRAINL	Rep6	0	0.0
+delete_0_0	TRAINL	Rep7	0	0.0
+delete_0_0	TRAINL	Rep8	0	0.0
+delete_0_0	TRAINL	Rep9	0	0.0
+delete_0_0	TRAINL	Rep10	0	0.0
+delete_0_0	TRAINL	Rep11	0	0.0
+delete_0_0	TRAINL	Rep12	0	0.0
+delete_0_0	TRAINL	Rep13	0	0.0
+delete_0_0	TRAINL	Rep14	0	0.0
+delete_0_0	TRAINL	Rep15	0	0.0
+delete_0_0	TRAINL	Rep16	0	0.0
+delete_0_0	TRAINL	Rep17	0	0.0
+delete_0_0	TRAINL	Rep18	0	0.0
+delete_0_0	TRAINL	Rep19	0	0.0
+delete_0_0	TRAINL	Rep20	0	0.0
+delete_0_0	TRAINL	Rep21	0	0.0
+delete_0_0	TRAINL	Rep22	0	0.0
+delete_0_0	TRAINL	Rep23	0	0.0
+delete_0_0	TRAINL	Rep24	0	0.0
+delete_0_0	TRAINL	Rep25	0	0.0
+delete_0_0	TRAINL	RepAvg	0	0.0
+delete_0_0	TRAINL	RandEnd	0	0.0
+delete_0_0	TRAINL	Overall	0	0.0
+End at 0
+
