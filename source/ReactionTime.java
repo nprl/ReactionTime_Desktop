@@ -1,6 +1,6 @@
 
 // Version 3 New things in V3: 
-
+//in order to create jar do: jar -cvm0f manifest.txt NameOfJar.jar *.class rightHand.PNG leftHand.PNG logo.jpg 
 // random inbetween repeated?
 
 
@@ -152,7 +152,7 @@ public class ReactionTime extends Application{
 		stage.setFullScreen(true);
 		stage.sizeToScene();
 		stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
-			
+		
 		boolean play = dialog();
 		if (play) { //true type
 			stage.show();
@@ -160,12 +160,10 @@ public class ReactionTime extends Application{
 			// stage.show();
 
 		} else {
-			// System.out.println("went to AWARE");
-		
+			System.out.println("went to AWARE");
 			awareScreen(stage);
 			//aware
 		}
-		//initializing elements of array
 		
 	}
 	public void awareScreen(Stage stage) {
@@ -221,7 +219,6 @@ public class ReactionTime extends Application{
 
 		Scene s = new Scene(stack, 1000, 1000);
 		
-		// System.out.println("code is happening");
 		//check for key press
 		s.setOnKeyPressed(new EventHandler<KeyEvent>() { // when key pressed
 			
@@ -475,7 +472,6 @@ public class ReactionTime extends Application{
 	public void blink(Rectangle r) {
 		r.setFill(Color.CYAN);
 		onset[count] = System.currentTimeMillis();
-		// System.out.println("onset [" + count + "]: "+onset[count]);
 	}
 
 	/**
@@ -601,7 +597,6 @@ public class ReactionTime extends Application{
 					if (count < trials) { // checks if going to continue another cycle
 						
 						if (count < trials - 1){ 
-							// System.out.println("count" + count + "repeat");
 							count = count + 1;
 							cycle(scene, s2); //continues
 						} else if (count < trials) { //aka does count == trials - 1
@@ -613,10 +608,8 @@ public class ReactionTime extends Application{
 				} else if (k.getCode().equals(KeyCode.BACK_SPACE)) { // if user presses backspace
 					close(s2);
 				} else {// if user entered incorrect key
-					// System.out.println("bad [" + count+ "]" +bad[count]);
 					viableTrials = viableTrials - 1;
 					bad[count] = bad[count] - 1;
-					// System.out.println("bad [" + count+ "]" +bad[count]);
 				}
 				looper = looper + 1;
 				oldkey = key;
@@ -625,8 +618,6 @@ public class ReactionTime extends Application{
 		});
 	}
 
-	public void myKeyPress(Scene scene, Stage s2, KeyEvent k) {
-		}
 
 	// This method createst the first dialog box
 	public boolean dialog() {
@@ -640,13 +631,14 @@ public class ReactionTime extends Application{
 		//Defining the Name text field
 		final TextField name = new TextField();
 		name.setPromptText("Enter Participant ID.");
+		name.setPrefWidth(250);
 		name.setPrefColumnCount(10);
 		name.getText();
 		GridPane.setConstraints(name, 0, 0);
 		grid.getChildren().add(name);
 		//Defining the test text field
 		final TextField testText = new TextField();
-		testText.setPromptText("TESTR, TESTL or TRAIN.");
+		testText.setPromptText("TESTR, TESTL, TRAINR, or TRAINL.");
 		GridPane.setConstraints(testText, 0, 1);
 		grid.getChildren().add(testText);
 		//Defining the Last Name text field
@@ -660,10 +652,17 @@ public class ReactionTime extends Application{
 		comment.setPromptText("Time/Stage. (ie. Post0)");
 		GridPane.setConstraints(comment, 0, 3);
 		grid.getChildren().add(comment);
+
+		//adding the message
+		Text message = new Text("Welcome, press submit to continue");
+		GridPane.setConstraints(message, 0, 4);
+		grid.getChildren().add(message);
+
 		//Defining the Submit button
 		Button submit = new Button("Submit");
 		GridPane.setConstraints(submit, 1, 0);
 		grid.getChildren().add(submit);
+
 		//Defining the Clear button
 		Button clear = new Button("Clear");
 		GridPane.setConstraints(clear, 1, 1);
@@ -688,21 +687,21 @@ public class ReactionTime extends Application{
 		        visiter = lastName.getText();
 		        stager = comment.getText();
 		        boolean worked = setString(test);
+		        // System.out.println(test);
+		        // System.out.println(worked);
+
 		        if (worked) {
-		        	// System.out.println("closing");
 		        	s.close();
-		        	bool = true;
+					bool = true;
 
 		        } else { //set string returned false
 		        	if (test.contains("AWARE")) {
 		        		bool = false;
-		        		// System.out.println("wrote aware");
 		        		s.close();
 		        	} else {
-
-		        	// System.out.println("try again");
 			        	clear.fire();
-
+			        	message.setText("Please enter a viable TEST condition");
+			        	//TODO: add a message at the bottom maybe
 		        	}
 		        }
 		     }
@@ -757,14 +756,17 @@ public class ReactionTime extends Application{
 			reactionTimes = new long[trials];
 			bad = new int[trials];
 			return true;
-			// System.out.println(trials);
-		} else if (test.contains("TRAIN")) { // if user enters training
+		} else if (test.contains("TRAINR") || test.contains("TRAINL")) { // if user enters training
 			hand = new ImageView(new Image(this.getClass().getResourceAsStream("rightHand.PNG")));
-				
+			if (test.contains("L")){
+				hand = new ImageView(new Image(this.getClass().getResourceAsStream("leftHand.PNG")));
+			} else if (test.contains("R")) {
+				hand = new ImageView(new Image(this.getClass().getResourceAsStream("rightHand.PNG")));
+			}
+
 			if (test.contains("1")) {
 				seq = invert(seq);
 			}
-			// System.out.println(seq);
 			predetermined = predetermined + "24321321421341234312314324323143213243124142314321";
 			runs = 25;
 			for (int x = 0; x < runs; x++){
@@ -863,7 +865,7 @@ public class ReactionTime extends Application{
 			// System.out.println("avgSeqReaction" + "[" + x+ "]: " +avgSeqReaction[x]);
 			// System.out.println("avgSegAccuracy" +"[ "+x+"]: " + avgSeqAccuracy[x] );
 		}
-		if (count > 50 + (seq.length()*12)) { // if stop after all sequences
+		if (count > 50 + (seq.length()*runs)) { // if stop after all sequences
 			trialsAvg = Math.round(avgTotal/(double)(seq.length()*runs));
 			trialsAcc = Math.round(100.0*(count - 100.0 + (double)avgBad)/((double)(seq.length()*runs)))/100.0;
 		} else if (count > 50) { // if stop in middle of seq
@@ -912,8 +914,6 @@ public class ReactionTime extends Application{
 	//records data from the groups
 	public void writeToFile(String fileName) {
 		try {
-			// System.out.println("Enter participant ID");
-			// String id = scan.next();
 			FileWriter file = new FileWriter(new File(fileName), true);
 
 			if (fileName.equals(namer)) {
