@@ -559,7 +559,7 @@ public class ReactionTime extends Application{
 
 		rpressed = read(predetermined, count);
 		if(count % 20 == 0) {//or predetermined
-					
+			//hi
 		}
 		// for a random rectangle. 
 		// 	rpressed = random(); 
