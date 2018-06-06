@@ -558,7 +558,9 @@ public class ReactionTime extends Application{
 		r4.setFill(Color.WHITE);
 
 		rpressed = read(predetermined, count);
-		
+		if(count % 20 == 0) {//or predetermined
+					
+		}
 		// for a random rectangle. 
 		// 	rpressed = random(); 
 
