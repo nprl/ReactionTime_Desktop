@@ -1,0 +1,88 @@
+ID: 	Cond	Block	AvgRxnT	Accuracy
+kirthi_1_pre	TESTR	RandBeg	445	0.95
+kirthi_1_pre	TESTR	Rep1	0	0.0
+kirthi_1_pre	TESTR	Rep2	0	0.0
+kirthi_1_pre	TESTR	Rep3	0	0.0
+kirthi_1_pre	TESTR	Rep4	0	0.0
+kirthi_1_pre	TESTR	Rep5	0	0.0
+kirthi_1_pre	TESTR	Rep6	0	0.0
+kirthi_1_pre	TESTR	Rep7	0	0.0
+kirthi_1_pre	TESTR	Rep8	0	0.0
+kirthi_1_pre	TESTR	Rep9	0	0.0
+kirthi_1_pre	TESTR	Rep10	0	0.0
+kirthi_1_pre	TESTR	Rep11	0	0.0
+kirthi_1_pre	TESTR	Rep12	0	0.0
+kirthi_1_pre	TESTR	Rep13	0	0.0
+kirthi_1_pre	TESTR	Rep14	0	0.0
+kirthi_1_pre	TESTR	Rep15	0	0.0
+kirthi_1_pre	TESTR	RepAvg	0	0.0
+kirthi_1_pre	TESTR	RandEnd	0	0.0
+kirthi_1_pre	TESTR	Overall	445	0.95
+End at 40
+
+ID: 	Cond	Block	AvgRxnT	Accuracy
+kirthi_1_pre	TESTR	RandBeg	496	0.9
+kirthi_1_pre	TESTR	Rep1	0	0.0
+kirthi_1_pre	TESTR	Rep2	0	0.0
+kirthi_1_pre	TESTR	Rep3	0	0.0
+kirthi_1_pre	TESTR	Rep4	0	0.0
+kirthi_1_pre	TESTR	Rep5	0	0.0
+kirthi_1_pre	TESTR	Rep6	0	0.0
+kirthi_1_pre	TESTR	Rep7	0	0.0
+kirthi_1_pre	TESTR	Rep8	0	0.0
+kirthi_1_pre	TESTR	Rep9	0	0.0
+kirthi_1_pre	TESTR	Rep10	0	0.0
+kirthi_1_pre	TESTR	Rep11	0	0.0
+kirthi_1_pre	TESTR	Rep12	0	0.0
+kirthi_1_pre	TESTR	Rep13	0	0.0
+kirthi_1_pre	TESTR	Rep14	0	0.0
+kirthi_1_pre	TESTR	Rep15	0	0.0
+kirthi_1_pre	TESTR	RepAvg	0	0.0
+kirthi_1_pre	TESTR	RandEnd	0	0.0
+kirthi_1_pre	TESTR	Overall	496	0.9
+End at 40
+
+ID: 	Cond	Block	AvgRxnT	Accuracy
+kirthi_1_pre	TESTR	RandBeg	603	0.98
+kirthi_1_pre	TESTR	Rep1	0	0.0
+kirthi_1_pre	TESTR	Rep2	0	0.0
+kirthi_1_pre	TESTR	Rep3	0	0.0
+kirthi_1_pre	TESTR	Rep4	0	0.0
+kirthi_1_pre	TESTR	Rep5	0	0.0
+kirthi_1_pre	TESTR	Rep6	0	0.0
+kirthi_1_pre	TESTR	Rep7	0	0.0
+kirthi_1_pre	TESTR	Rep8	0	0.0
+kirthi_1_pre	TESTR	Rep9	0	0.0
+kirthi_1_pre	TESTR	Rep10	0	0.0
+kirthi_1_pre	TESTR	Rep11	0	0.0
+kirthi_1_pre	TESTR	Rep12	0	0.0
+kirthi_1_pre	TESTR	Rep13	0	0.0
+kirthi_1_pre	TESTR	Rep14	0	0.0
+kirthi_1_pre	TESTR	Rep15	0	0.0
+kirthi_1_pre	TESTR	RepAvg	0	1.0
+kirthi_1_pre	TESTR	RandEnd	0	0.0
+kirthi_1_pre	TESTR	Overall	556	0.79
+End at 62
+
+ID: 	Cond	Block	AvgRxnT	Accuracy
+kirthi_1_pre	TESTR	RandBeg	530	0.93
+kirthi_1_pre	TESTR	Rep1	0	0.0
+kirthi_1_pre	TESTR	Rep2	0	0.0
+kirthi_1_pre	TESTR	Rep3	0	0.0
+kirthi_1_pre	TESTR	Rep4	0	0.0
+kirthi_1_pre	TESTR	Rep5	0	0.0
+kirthi_1_pre	TESTR	Rep6	0	0.0
+kirthi_1_pre	TESTR	Rep7	0	0.0
+kirthi_1_pre	TESTR	Rep8	0	0.0
+kirthi_1_pre	TESTR	Rep9	0	0.0
+kirthi_1_pre	TESTR	Rep10	0	0.0
+kirthi_1_pre	TESTR	Rep11	0	0.0
+kirthi_1_pre	TESTR	Rep12	0	0.0
+kirthi_1_pre	TESTR	Rep13	0	0.0
+kirthi_1_pre	TESTR	Rep14	0	0.0
+kirthi_1_pre	TESTR	Rep15	0	0.0
+kirthi_1_pre	TESTR	RepAvg	0	0.0
+kirthi_1_pre	TESTR	RandEnd	0	0.0
+kirthi_1_pre	TESTR	Overall	530	0.93
+End at 27
+

@@ -5,6 +5,8 @@
 
 
 //All the stuff we need to import to run this program
+import jssc.*;
+import jssc.SerialPortException;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -108,6 +110,7 @@ public class ReactionTime extends Application{
 	private String visiter = "";
 	private String stager = "";
 
+	private SerialPort serialPort; //serial communication using JSSC
 	private ArrayList<String>[] pressed; //need to instantiate after set string is called
 	private String oldkey = "a";
 	private int looper = 0;  //since the key pressed thing loops, we need this variable to see
@@ -134,7 +137,17 @@ public class ReactionTime extends Application{
 	// this prepares everything for the program and allows the game
 	// to begin only after the start button is pressed
 	public void start(Stage stage) {
-		
+		try {
+			String[] ports = SerialPortList.getPortNames();
+			serialPort = new SerialPort(ports[0]);
+			serialPort.openPort();
+			serialPort.setParams(SerialPort.BAUDRATE_9600, SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
+		} catch (SerialPortException e) {
+			System.out.println(e.getPortName() + " " + e.getMethodName() + " " + e.getExceptionType());
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
 		//added stuff: to test
 		if(Screen.getScreens().size() == 1) {
 			primaryScreenBounds = Screen.getPrimary().getVisualBounds();
@@ -558,8 +571,22 @@ public class ReactionTime extends Application{
 		r4.setFill(Color.WHITE);
 
 		rpressed = read(predetermined, count);
+		try {
+			serialPort.writeString("Q@n");//remote control
+		} catch (SerialPortException e) {
+			System.out.println(e.getPortName() + " " + e.getMethodName() + " " + e.getExceptionType());
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
 		if(count % 20 == 0) {//or predetermined
-			//hi
+			try {
+				serialPort.writeString("EHr");//arm	
+			} catch (SerialPortException e) {
+				System.out.println(e.getPortName() + " " + e.getMethodName() + " " + e.getExceptionType());
+			} catch (Exception e) {
+				System.out.println(e);
+			}
 		}
 		// for a random rectangle. 
 		// 	rpressed = random(); 
@@ -1024,6 +1051,13 @@ public class ReactionTime extends Application{
 
 	// a method that should be called whenever someone wants to exit the program
 	public void close(Stage s2) {
+		try {
+			serialPort.closePort();
+		} catch (SerialPortException e) {
+			System.out.println(e.getPortName() + " " + e.getMethodName() + " " + e.getExceptionType());
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 		calculations();
 		analyze();
 		writer();
