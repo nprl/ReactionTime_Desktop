@@ -69,7 +69,7 @@ import java.util.LinkedList;
 public class ReactionTime extends Application{
 	
 	//variable we will use in various methods throughout the program
-	private String seq = "423142124323";
+	private String seq = "423142124323"; //the repeated sequence
 	private String predetermined = "";
 	public static String newline = System.getProperty("line.separator");
 	private Rectangle r1, r2, r3, r4,rpressed; //represents each of the rectangles 1-4 and the rectangle thats pressed
@@ -82,16 +82,16 @@ public class ReactionTime extends Application{
 	//represents the amount of time (in milliseconds the participant took to react)
 	//the value of the reactiontime will be negative if an incorrect key was pressed
 	private int viableTrials; //trails minus the wrong keys pressed
-	private int[] bad;
+	private int[] bad; //
 	// Scanner scan;
 	private String text; //not even sure if I use
 	private String id; //test or train
-	private int countdown;
-	private StackPane stack;
+	private int countdown; //
+	private StackPane stack; //
 	private int runs;
 	private long avgReaction; //average reactiontime of the participant across all of the trials
-	private long[] avgSeqReaction;
-	private long[] interpress;
+	private long[] avgSeqReaction; // the average reaction time of all of the elements in a sequence
+	private long[] interpress; //
 	private long randFirstAvg;
 	private long randLastAvg; 
 	private long trialsAvg;
@@ -99,10 +99,10 @@ public class ReactionTime extends Application{
 	private double[] avgSeqAccuracy;
 	private double randFirstAcc;
 	private double randLastAcc;
-	private double trialsAcc;
-	private StackPane primaryStack;
-	private Group rmid;
-	private ImageView hand;
+	private double trialsAcc; //
+	private StackPane primaryStack; //
+	private Group rmid; //
+	private ImageView hand; 
 	private String test = "";
 	private String namer = "";
 	private String visiter = "";
@@ -135,14 +135,14 @@ public class ReactionTime extends Application{
 	// to begin only after the start button is pressed
 	public void start(Stage stage) {
 		
-		//added stuff: to test
-		if(Screen.getScreens().size() == 1) {
+		//getting window boundaries
+		if(Screen.getScreens().size() == 1) { //if one screen
 			primaryScreenBounds = Screen.getPrimary().getVisualBounds();
-		} else {
+		} else { //if two screens (or more)
 			primaryScreenBounds = Screen.getScreens().get(1).getVisualBounds();
 		}
 		
-		
+		//set location of stage
 		stage.setX(primaryScreenBounds.getMinX());
 		stage.setY(primaryScreenBounds.getMinY());
 
@@ -154,15 +154,13 @@ public class ReactionTime extends Application{
 		stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
 		
 		boolean play = dialog();
-		if (play) { //true type
+		if (play) { //decides which window to go to
 			stage.show();
 			startButtonScreen(stage);
-			// stage.show();
 
 		} else {
 			System.out.println("went to AWARE");
 			awareScreen(stage);
-			//aware
 		}
 		
 	}
